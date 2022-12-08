@@ -99,13 +99,12 @@
 		75AEEFA2294148CD005B7ABD /* marvel-comics */ = {
 			isa = PBXGroup;
 			children = (
-				75AEEFA3294148CD005B7ABD /* AppDelegate.swift */,
-				75AEEFA5294148CD005B7ABD /* SceneDelegate.swift */,
-				75AEEFA7294148CD005B7ABD /* ViewController.swift */,
-				75AEEFA9294148CD005B7ABD /* Main.storyboard */,
-				75AEEFAC294148CE005B7ABD /* Assets.xcassets */,
-				75AEEFAE294148CE005B7ABD /* LaunchScreen.storyboard */,
-				75AEEFB1294148CE005B7ABD /* Info.plist */,
+				75AEEFD8294161EF005B7ABD /* Services */,
+				75AEEFD7294161AB005B7ABD /* Views */,
+				75AEEFD6294160FF005B7ABD /* ViewModels */,
+				75AEEFD5294160F8005B7ABD /* Models */,
+				75AEEFD4294160E3005B7ABD /* Controllers */,
+				75AEEFD32941558D005B7ABD /* SupportFiles */,
 			);
 			path = "marvel-comics";
 			sourceTree = "<group>";
@@ -125,6 +124,55 @@
 				75AEEFC6294148CE005B7ABD /* marvel_comicsUITestsLaunchTests.swift */,
 			);
 			path = "marvel-comicsUITests";
+			sourceTree = "<group>";
+		};
+		75AEEFD32941558D005B7ABD /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				75AEEFA5294148CD005B7ABD /* SceneDelegate.swift */,
+				75AEEFA3294148CD005B7ABD /* AppDelegate.swift */,
+				75AEEFAE294148CE005B7ABD /* LaunchScreen.storyboard */,
+				75AEEFAC294148CE005B7ABD /* Assets.xcassets */,
+				75AEEFB1294148CE005B7ABD /* Info.plist */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		75AEEFD4294160E3005B7ABD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				75AEEFA9294148CD005B7ABD /* Main.storyboard */,
+				75AEEFA7294148CD005B7ABD /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		75AEEFD5294160F8005B7ABD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		75AEEFD6294160FF005B7ABD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		75AEEFD7294161AB005B7ABD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		75AEEFD8294161EF005B7ABD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,7 +414,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +468,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -439,7 +487,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8KR33X63ZD;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "marvel-comics/Info.plist";
+				INFOPLIST_FILE = "marvel-comics/SupportFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -467,7 +515,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8KR33X63ZD;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "marvel-comics/Info.plist";
+				INFOPLIST_FILE = "marvel-comics/SupportFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
