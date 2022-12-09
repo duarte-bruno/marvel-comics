@@ -14,19 +14,10 @@
 		75AEEFAD294148CE005B7ABD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75AEEFAC294148CE005B7ABD /* Assets.xcassets */; };
 		75AEEFB0294148CE005B7ABD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75AEEFAE294148CE005B7ABD /* LaunchScreen.storyboard */; };
 		75AEEFBB294148CE005B7ABD /* marvel_comicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEEFBA294148CE005B7ABD /* marvel_comicsTests.swift */; };
-		75AEEFC5294148CE005B7ABD /* marvel_comicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEEFC4294148CE005B7ABD /* marvel_comicsUITests.swift */; };
-		75AEEFC7294148CE005B7ABD /* marvel_comicsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEEFC6294148CE005B7ABD /* marvel_comicsUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		75AEEFB7294148CE005B7ABD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 75AEEF98294148CD005B7ABD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 75AEEF9F294148CD005B7ABD;
-			remoteInfo = "marvel-comics";
-		};
-		75AEEFC1294148CE005B7ABD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 75AEEF98294148CD005B7ABD /* Project object */;
 			proxyType = 1;
@@ -46,9 +37,6 @@
 		75AEEFB1294148CE005B7ABD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75AEEFB6294148CE005B7ABD /* marvel-comicsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "marvel-comicsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75AEEFBA294148CE005B7ABD /* marvel_comicsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = marvel_comicsTests.swift; sourceTree = "<group>"; };
-		75AEEFC0294148CE005B7ABD /* marvel-comicsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "marvel-comicsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		75AEEFC4294148CE005B7ABD /* marvel_comicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = marvel_comicsUITests.swift; sourceTree = "<group>"; };
-		75AEEFC6294148CE005B7ABD /* marvel_comicsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = marvel_comicsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +54,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		75AEEFBD294148CE005B7ABD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,7 +62,6 @@
 			children = (
 				75AEEFA2294148CD005B7ABD /* marvel-comics */,
 				75AEEFB9294148CE005B7ABD /* marvel-comicsTests */,
-				75AEEFC3294148CE005B7ABD /* marvel-comicsUITests */,
 				75AEEFA1294148CD005B7ABD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +71,6 @@
 			children = (
 				75AEEFA0294148CD005B7ABD /* marvel-comics.app */,
 				75AEEFB6294148CE005B7ABD /* marvel-comicsTests.xctest */,
-				75AEEFC0294148CE005B7ABD /* marvel-comicsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,15 +91,6 @@
 				75AEEFBA294148CE005B7ABD /* marvel_comicsTests.swift */,
 			);
 			path = "marvel-comicsTests";
-			sourceTree = "<group>";
-		};
-		75AEEFC3294148CE005B7ABD /* marvel-comicsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				75AEEFC4294148CE005B7ABD /* marvel_comicsUITests.swift */,
-				75AEEFC6294148CE005B7ABD /* marvel_comicsUITestsLaunchTests.swift */,
-			);
-			path = "marvel-comicsUITests";
 			sourceTree = "<group>";
 		};
 		75AEEFD32941558D005B7ABD /* SupportFiles */ = {
@@ -229,24 +199,6 @@
 			productReference = 75AEEFB6294148CE005B7ABD /* marvel-comicsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		75AEEFBF294148CE005B7ABD /* marvel-comicsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 75AEEFD0294148CE005B7ABD /* Build configuration list for PBXNativeTarget "marvel-comicsUITests" */;
-			buildPhases = (
-				75AEEFBC294148CE005B7ABD /* Sources */,
-				75AEEFBD294148CE005B7ABD /* Frameworks */,
-				75AEEFBE294148CE005B7ABD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				75AEEFC2294148CE005B7ABD /* PBXTargetDependency */,
-			);
-			name = "marvel-comicsUITests";
-			productName = "marvel-comicsUITests";
-			productReference = 75AEEFC0294148CE005B7ABD /* marvel-comicsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -261,10 +213,6 @@
 						CreatedOnToolsVersion = 13.4.1;
 					};
 					75AEEFB5294148CE005B7ABD = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = 75AEEF9F294148CD005B7ABD;
-					};
-					75AEEFBF294148CE005B7ABD = {
 						CreatedOnToolsVersion = 13.4.1;
 						TestTargetID = 75AEEF9F294148CD005B7ABD;
 					};
@@ -285,7 +233,6 @@
 			targets = (
 				75AEEF9F294148CD005B7ABD /* marvel-comics */,
 				75AEEFB5294148CE005B7ABD /* marvel-comicsTests */,
-				75AEEFBF294148CE005B7ABD /* marvel-comicsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -302,13 +249,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		75AEEFB4294148CE005B7ABD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		75AEEFBE294148CE005B7ABD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -336,15 +276,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		75AEEFBC294148CE005B7ABD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				75AEEFC5294148CE005B7ABD /* marvel_comicsUITests.swift in Sources */,
-				75AEEFC7294148CE005B7ABD /* marvel_comicsUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -352,11 +283,6 @@
 			isa = PBXTargetDependency;
 			target = 75AEEF9F294148CD005B7ABD /* marvel-comics */;
 			targetProxy = 75AEEFB7294148CE005B7ABD /* PBXContainerItemProxy */;
-		};
-		75AEEFC2294148CE005B7ABD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 75AEEF9F294148CD005B7ABD /* marvel-comics */;
-			targetProxy = 75AEEFC1294148CE005B7ABD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -590,42 +516,6 @@
 			};
 			name = Release;
 		};
-		75AEEFD1294148CE005B7ABD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8KR33X63ZD;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.duarte-bruno.marvel-comicsUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "marvel-comics";
-			};
-			name = Debug;
-		};
-		75AEEFD2294148CE005B7ABD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8KR33X63ZD;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.duarte-bruno.marvel-comicsUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "marvel-comics";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -652,15 +542,6 @@
 			buildConfigurations = (
 				75AEEFCE294148CE005B7ABD /* Debug */,
 				75AEEFCF294148CE005B7ABD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		75AEEFD0294148CE005B7ABD /* Build configuration list for PBXNativeTarget "marvel-comicsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				75AEEFD1294148CE005B7ABD /* Debug */,
-				75AEEFD2294148CE005B7ABD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
