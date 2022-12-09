@@ -99,11 +99,8 @@
 		75AEEFA2294148CD005B7ABD /* marvel-comics */ = {
 			isa = PBXGroup;
 			children = (
-				75AEEFD8294161EF005B7ABD /* Services */,
-				75AEEFD7294161AB005B7ABD /* Views */,
-				75AEEFD6294160FF005B7ABD /* ViewModels */,
-				75AEEFD5294160F8005B7ABD /* Models */,
-				75AEEFD4294160E3005B7ABD /* Controllers */,
+				75AEEFD92942C3F7005B7ABD /* Tools */,
+				75AEEFDA2942C432005B7ABD /* Features */,
 				75AEEFD32941558D005B7ABD /* SupportFiles */,
 			);
 			path = "marvel-comics";
@@ -168,11 +165,30 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		75AEEFD8294161EF005B7ABD /* Services */ = {
+		75AEEFD92942C3F7005B7ABD /* Tools */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Services;
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		75AEEFDA2942C432005B7ABD /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				75AEEFDB2942CE9B005B7ABD /* ListComics */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		75AEEFDB2942CE9B005B7ABD /* ListComics */ = {
+			isa = PBXGroup;
+			children = (
+				75AEEFD7294161AB005B7ABD /* Views */,
+				75AEEFD6294160FF005B7ABD /* ViewModels */,
+				75AEEFD5294160F8005B7ABD /* Models */,
+				75AEEFD4294160E3005B7ABD /* Controllers */,
+			);
+			path = ListComics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
