@@ -8,12 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		75AEEFA4294148CD005B7ABD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEEFA3294148CD005B7ABD /* AppDelegate.swift */; };
-		75AEEFA6294148CD005B7ABD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEEFA5294148CD005B7ABD /* SceneDelegate.swift */; };
-		75AEEFA8294148CD005B7ABD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEEFA7294148CD005B7ABD /* ViewController.swift */; };
-		75AEEFAB294148CD005B7ABD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75AEEFA9294148CD005B7ABD /* Main.storyboard */; };
 		75AEEFAD294148CE005B7ABD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75AEEFAC294148CE005B7ABD /* Assets.xcassets */; };
 		75AEEFB0294148CE005B7ABD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75AEEFAE294148CE005B7ABD /* LaunchScreen.storyboard */; };
 		75AEEFBB294148CE005B7ABD /* marvel_comicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEEFBA294148CE005B7ABD /* marvel_comicsTests.swift */; };
+		75AEEFDD2942D683005B7ABD /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEEFDC2942D683005B7ABD /* TabBarViewController.swift */; };
+		75AEEFDF2942DC8E005B7ABD /* ListComicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEEFDE2942DC8E005B7ABD /* ListComicsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,14 +28,13 @@
 /* Begin PBXFileReference section */
 		75AEEFA0294148CD005B7ABD /* marvel-comics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "marvel-comics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75AEEFA3294148CD005B7ABD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		75AEEFA5294148CD005B7ABD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		75AEEFA7294148CD005B7ABD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		75AEEFAA294148CD005B7ABD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75AEEFAC294148CE005B7ABD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75AEEFAF294148CE005B7ABD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75AEEFB1294148CE005B7ABD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75AEEFB6294148CE005B7ABD /* marvel-comicsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "marvel-comicsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75AEEFBA294148CE005B7ABD /* marvel_comicsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = marvel_comicsTests.swift; sourceTree = "<group>"; };
+		75AEEFDC2942D683005B7ABD /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		75AEEFDE2942DC8E005B7ABD /* ListComicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListComicsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +94,6 @@
 		75AEEFD32941558D005B7ABD /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
-				75AEEFA5294148CD005B7ABD /* SceneDelegate.swift */,
 				75AEEFA3294148CD005B7ABD /* AppDelegate.swift */,
 				75AEEFAE294148CE005B7ABD /* LaunchScreen.storyboard */,
 				75AEEFAC294148CE005B7ABD /* Assets.xcassets */,
@@ -108,8 +105,7 @@
 		75AEEFD4294160E3005B7ABD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				75AEEFA9294148CD005B7ABD /* Main.storyboard */,
-				75AEEFA7294148CD005B7ABD /* ViewController.swift */,
+				75AEEFDE2942DC8E005B7ABD /* ListComicsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -138,6 +134,7 @@
 		75AEEFD92942C3F7005B7ABD /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				75AEEFDC2942D683005B7ABD /* TabBarViewController.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -244,7 +241,6 @@
 			files = (
 				75AEEFB0294148CE005B7ABD /* LaunchScreen.storyboard in Resources */,
 				75AEEFAD294148CE005B7ABD /* Assets.xcassets in Resources */,
-				75AEEFAB294148CD005B7ABD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +258,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75AEEFA8294148CD005B7ABD /* ViewController.swift in Sources */,
+				75AEEFDD2942D683005B7ABD /* TabBarViewController.swift in Sources */,
+				75AEEFDF2942DC8E005B7ABD /* ListComicsViewController.swift in Sources */,
 				75AEEFA4294148CD005B7ABD /* AppDelegate.swift in Sources */,
-				75AEEFA6294148CD005B7ABD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,14 +283,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		75AEEFA9294148CD005B7ABD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				75AEEFAA294148CD005B7ABD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		75AEEFAE294148CE005B7ABD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -432,7 +420,8 @@
 				INFOPLIST_FILE = "marvel-comics/SupportFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -460,7 +449,8 @@
 				INFOPLIST_FILE = "marvel-comics/SupportFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
