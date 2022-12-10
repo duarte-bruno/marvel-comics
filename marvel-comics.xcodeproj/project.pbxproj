@@ -13,6 +13,9 @@
 		75AEEFBB294148CE005B7ABD /* marvel_comicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEEFBA294148CE005B7ABD /* marvel_comicsTests.swift */; };
 		75AEEFDD2942D683005B7ABD /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEEFDC2942D683005B7ABD /* TabBarViewController.swift */; };
 		75AEEFDF2942DC8E005B7ABD /* ListComicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEEFDE2942DC8E005B7ABD /* ListComicsViewController.swift */; };
+		75AEEFE12943FC32005B7ABD /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEEFE02943FC32005B7ABD /* HttpRequest.swift */; };
+		75AEEFE42943FE59005B7ABD /* UrlSessionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEEFE32943FE59005B7ABD /* UrlSessionRequest.swift */; };
+		75AEEFE629441DB9005B7ABD /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEEFE529441DB9005B7ABD /* AppConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,9 @@
 		75AEEFBA294148CE005B7ABD /* marvel_comicsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = marvel_comicsTests.swift; sourceTree = "<group>"; };
 		75AEEFDC2942D683005B7ABD /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		75AEEFDE2942DC8E005B7ABD /* ListComicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListComicsViewController.swift; sourceTree = "<group>"; };
+		75AEEFE02943FC32005B7ABD /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
+		75AEEFE32943FE59005B7ABD /* UrlSessionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSessionRequest.swift; sourceTree = "<group>"; };
+		75AEEFE529441DB9005B7ABD /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				75AEEFDC2942D683005B7ABD /* TabBarViewController.swift */,
+				75AEEFE22943FE01005B7ABD /* Service */,
+				75AEEFE529441DB9005B7ABD /* AppConfiguration.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -156,6 +164,15 @@
 				75AEEFD4294160E3005B7ABD /* Controllers */,
 			);
 			path = ListComics;
+			sourceTree = "<group>";
+		};
+		75AEEFE22943FE01005B7ABD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				75AEEFE02943FC32005B7ABD /* HttpRequest.swift */,
+				75AEEFE32943FE59005B7ABD /* UrlSessionRequest.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +275,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75AEEFE629441DB9005B7ABD /* AppConfiguration.swift in Sources */,
 				75AEEFDD2942D683005B7ABD /* TabBarViewController.swift in Sources */,
+				75AEEFE12943FC32005B7ABD /* HttpRequest.swift in Sources */,
 				75AEEFDF2942DC8E005B7ABD /* ListComicsViewController.swift in Sources */,
+				75AEEFE42943FE59005B7ABD /* UrlSessionRequest.swift in Sources */,
 				75AEEFA4294148CD005B7ABD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
