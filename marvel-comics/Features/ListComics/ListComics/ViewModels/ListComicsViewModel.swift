@@ -40,7 +40,7 @@ class ListComicsViewModel: ListComicsViewModelProtocol {
         self.service = service
         self.coordinatorDelegate = coordinatorDelegate
         self.comicsResult = nil
-        self.title = "Comics"
+        self.title = Str.TransportErrorTitle.l()
     }
     
     func updateComicsResult() {
@@ -53,9 +53,9 @@ class ListComicsViewModel: ListComicsViewModelProtocol {
                 print(error.description)
                 switch error {
                 case .transportError:
-                    self?.delegate?.showErrorAlert(title: "Ops", message: "Ocorreu um erro de conexão, por favor verifique a sua conexão ou tente novamente mais tarde.")
+                    self?.delegate?.showErrorAlert(title: Str.TransportErrorTitle.l(), message: Str.TransportErrorMessage.l())
                 default:
-                    self?.delegate?.showErrorAlert(title: "Ops", message: "Ocorreu um erro no sistema, por favor tente novamente mais tarde.")
+                    self?.delegate?.showErrorAlert(title: Str.SystemErrorTitle.l(), message: Str.SystemErrorMessage.l())
                 }
             }
         }

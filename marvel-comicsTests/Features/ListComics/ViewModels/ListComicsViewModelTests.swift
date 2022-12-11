@@ -48,8 +48,8 @@ class ListComicsViewModelTests: XCTestCase {
         
         waitForExpectations(timeout: 10)
         
-        XCTAssertEqual(lastErrorTitle, "Ops")
-        XCTAssertEqual(lastErrorMessage, "Ocorreu um erro de conexão, por favor verifique a sua conexão ou tente novamente mais tarde.")
+        XCTAssertEqual(lastErrorTitle, Str.TransportErrorTitle.l())
+        XCTAssertEqual(lastErrorMessage, Str.TransportErrorMessage.l())
     }
     
     func testUpdateComicsResultWithServerSideError() throws {
@@ -63,8 +63,8 @@ class ListComicsViewModelTests: XCTestCase {
         
         waitForExpectations(timeout: 10)
         
-        XCTAssertEqual(lastErrorTitle, "Ops")
-        XCTAssertEqual(lastErrorMessage, "Ocorreu um erro no sistema, por favor tente novamente mais tarde.")
+        XCTAssertEqual(lastErrorTitle, Str.SystemErrorTitle.l())
+        XCTAssertEqual(lastErrorMessage, Str.SystemErrorMessage.l())
     }
 }
 

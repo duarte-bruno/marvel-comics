@@ -35,6 +35,10 @@
 		75AEF00E29465A2F005B7ABD /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEEFDC2942D683005B7ABD /* TabBarViewController.swift */; };
 		75AEF013294663B2005B7ABD /* ComicResult.json in Resources */ = {isa = PBXBuildFile; fileRef = 75AEF012294663B2005B7ABD /* ComicResult.json */; };
 		75AEF01429466846005B7ABD /* ComicResult.json in Resources */ = {isa = PBXBuildFile; fileRef = 75AEF012294663B2005B7ABD /* ComicResult.json */; };
+		75AEF01F29467C55005B7ABD /* Default.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75AEF01E29467C55005B7ABD /* Default.strings */; };
+		75AEF02029467C55005B7ABD /* Default.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75AEF01E29467C55005B7ABD /* Default.strings */; };
+		75AEF02229467D6E005B7ABD /* Str.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEF02129467D6E005B7ABD /* Str.swift */; };
+		75AEF02329467D6E005B7ABD /* Str.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEF02129467D6E005B7ABD /* Str.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,8 @@
 		75AEEFFB29457C7F005B7ABD /* ListComicsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListComicsCoordinator.swift; sourceTree = "<group>"; };
 		75AEF003294655D9005B7ABD /* ListComicsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListComicsViewModelTests.swift; sourceTree = "<group>"; };
 		75AEF012294663B2005B7ABD /* ComicResult.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ComicResult.json; sourceTree = "<group>"; };
+		75AEF01E29467C55005B7ABD /* Default.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Default.strings; sourceTree = "<group>"; };
+		75AEF02129467D6E005B7ABD /* Str.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Str.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,7 @@
 		75AEEFD32941558D005B7ABD /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				75AEF01D29467C39005B7ABD /* Strings */,
 				75AEEFA3294148CD005B7ABD /* AppDelegate.swift */,
 				75AEEFAE294148CE005B7ABD /* LaunchScreen.storyboard */,
 				75AEEFAC294148CE005B7ABD /* Assets.xcassets */,
@@ -256,6 +263,15 @@
 			path = JsonMockFiles;
 			sourceTree = "<group>";
 		};
+		75AEF01D29467C39005B7ABD /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				75AEF01E29467C55005B7ABD /* Default.strings */,
+				75AEF02129467D6E005B7ABD /* Str.swift */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -337,6 +353,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75AEF01F29467C55005B7ABD /* Default.strings in Resources */,
 				75AEEFB0294148CE005B7ABD /* LaunchScreen.storyboard in Resources */,
 				75AEEFAD294148CE005B7ABD /* Assets.xcassets in Resources */,
 				75AEF01429466846005B7ABD /* ComicResult.json in Resources */,
@@ -347,6 +364,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75AEF02029467C55005B7ABD /* Default.strings in Resources */,
 				75AEF013294663B2005B7ABD /* ComicResult.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75AEEFFC29457C7F005B7ABD /* ListComicsCoordinator.swift in Sources */,
+				75AEF02229467D6E005B7ABD /* Str.swift in Sources */,
 				75AEEFE629441DB9005B7ABD /* AppConfiguration.swift in Sources */,
 				75AEEFDD2942D683005B7ABD /* TabBarViewController.swift in Sources */,
 				75AEEFEB294500CB005B7ABD /* ComicsResult.swift in Sources */,
@@ -378,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75AEF00529465989005B7ABD /* ListComicsViewModel.swift in Sources */,
+				75AEF02329467D6E005B7ABD /* Str.swift in Sources */,
 				75AEF004294655D9005B7ABD /* ListComicsViewModelTests.swift in Sources */,
 				75AEF00929465A1C005B7ABD /* ListComicsService.swift in Sources */,
 				75AEF00829465A14005B7ABD /* ComicsResult.swift in Sources */,
