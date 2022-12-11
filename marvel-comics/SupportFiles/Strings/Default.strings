@@ -1,0 +1,11 @@
+// MARK: - Global
+
+"TransportErrorTitle" = "Ops";
+"TransportErrorMessage" = "Ocorreu um erro de conexão, por favor verifique a sua conexão ou tente novamente mais tarde.";
+
+"SystemErrorTitle" = "Ops";
+"SystemErrorMessage" = "Ocorreu um erro no sistema, por favor tente novamente mais tarde.";
+
+// MARK: - ListComics
+
+"ListComicsTitle" = "Quadrinhos";
