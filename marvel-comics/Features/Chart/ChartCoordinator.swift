@@ -66,7 +66,8 @@ class ChartCoordinator: Coordinator {
     private func getScreen(_ screen: Screen) -> UIViewController {
         switch screen {
         case .chartList:
-            let viewModel = ChartListViewModel()
+            let service = CartService(UserDefaultsDataStore())
+            let viewModel = ChartListViewModel(service: service)
             let controller = ChartListViewController(viewModel: viewModel)
             return controller
         }

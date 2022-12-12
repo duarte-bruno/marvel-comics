@@ -9,6 +9,7 @@ import Foundation
 
 protocol ChartListViewModelDelegate: AnyObject {
     func chartListUpdated()
+    func showErrorAlert(title: String, message: String)
 }
 
 protocol ChartListViewModelProtocol {
@@ -16,7 +17,7 @@ protocol ChartListViewModelProtocol {
     var title: String { get }
     var chartList: [ChartItem] { get }
     
-    init()
+    init(service: CartServiceProtocol)
     
     func closeChart()
     func removeItem(_ chartItem: ChartItem)
@@ -29,17 +30,27 @@ class ChartListViewModel: ChartListViewModelProtocol {
     let title: String
     var chartList: [ChartItem]
     
+    private let service: CartServiceProtocol
+    
     // MARK: - Initialization
     
-    required init() {
+    required init(service: CartServiceProtocol) {
         self.title = Str.ChartListTitle.l()
         self.chartList = []
+        self.service = service
     }
     
     // MARK: - Public methods
     
     func closeChart() {
-        
+        service.getCartPurchases { [weak self] result in
+            switch result {
+            case .success(let comics):
+                self?.updatePurchases(with: comics)
+            case .failure:
+                self?.delegate?.showErrorAlert(title: Str.SystemErrorTitle.l(), message: Str.SystemErrorMessage.l())
+            }
+        }
     }
     
     func removeItem(_ chartItem: ChartItem) {
@@ -52,5 +63,30 @@ class ChartListViewModel: ChartListViewModelProtocol {
     func addComicToChart(_ comic: Comic, _ price: Price) {
         self.chartList.append(ChartItem(comic: comic, price: price))
         delegate?.chartListUpdated()
+    }
+    
+    // MARK: - Private methods
+    
+    private func updatePurchases(with data: [Comic]?) {
+        var newList: [Comic] = []
+        
+        for item in chartList {
+            newList.append(item.comic)
+        }
+        
+        if let data = data {
+            newList.append(contentsOf: data)
+        }
+        
+        service.postCartPurchases(data: newList) { [weak self] result in
+            switch result {
+            case .success:
+                self?.chartList = []
+                self?.delegate?.chartListUpdated()
+                self?.delegate?.showErrorAlert(title: Str.BoughtTitle.l(), message: Str.BoughtMessage.l())
+            case .failure:
+                self?.delegate?.showErrorAlert(title: Str.SystemErrorTitle.l(), message: Str.SystemErrorMessage.l())
+            }
+        }
     }
 }
