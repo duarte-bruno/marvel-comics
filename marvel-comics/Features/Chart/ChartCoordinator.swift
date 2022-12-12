@@ -32,6 +32,17 @@ class ChartCoordinator: Coordinator {
         setupNavigation()
     }
     
+    // MARK: - Public methods
+    
+    func buyComic(_ comic: Comic, _ price: Price) {
+        
+    }
+    
+    func addComicToChart(_ comic: Comic, _ price: Price) {
+        guard let chartController = navigationController.viewControllers[0] as? ChartListViewController else { return }
+        chartController.viewModel.addComicToChart(comic, price)
+    }
+    
     // MARK: - Private methods
     
     private func setupTabBarItem() {

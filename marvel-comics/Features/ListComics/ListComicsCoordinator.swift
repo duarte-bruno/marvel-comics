@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol ListComicsCoordinatorDelegate: AnyObject {
+    func buyComic(_ comic: Comic, _ price: Price)
+    func addComicToChart(_ comic: Comic, _ price: Price)
+}
+
 class ListComicsCoordinator: Coordinator {
     
     var initialController: UIViewController {
@@ -20,6 +25,7 @@ class ListComicsCoordinator: Coordinator {
     
     private let navigationController: UINavigationController
     private let httpRequest: HttpRequest
+    private weak var delegate: ListComicsCoordinatorDelegate?
     
     var title: String {
         return Str.ListComicsTitle.l()
@@ -27,9 +33,10 @@ class ListComicsCoordinator: Coordinator {
     
     // MARK: - Initialization
     
-    init() {
+    init(delegate: ListComicsCoordinatorDelegate?) {
         self.navigationController = UINavigationController()
         self.httpRequest = UrlSessionRequest(ProdAppConfig.shared)
+        self.delegate = delegate
         
         setupTabBarItem()
         setupNavigation()
@@ -82,10 +89,10 @@ extension ListComicsCoordinator: ListComicsViewModelCoordinatorDelegate {
 
 extension ListComicsCoordinator: ComicDetailViewModelCoordinatorDelegate {
     func buyComic(_ comic: Comic, _ price: Price) {
-        
+        delegate?.buyComic(comic, price)
     }
     
     func addComicToChart(_ comic: Comic, _ price: Price) {
-        
+        delegate?.addComicToChart(comic, price)
     }
 }

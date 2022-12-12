@@ -28,7 +28,7 @@ class MainCoordinator: Coordinator {
     // MARK: - Private methods
     
     private func setupCoordinators() {
-        self.listComicsCoordinator = ListComicsCoordinator()
+        self.listComicsCoordinator = ListComicsCoordinator(delegate: self)
         self.chartCoordinator = ChartCoordinator()
     }
     
@@ -38,5 +38,17 @@ class MainCoordinator: Coordinator {
         self.tabBarViewController = TabBarViewController(
             controllers: [listComicsCoordinator.initialController, chartCoordinator.initialController],
             selected: listComicsCoordinator.initialController)
+    }
+}
+
+// MARK: - ListComicsCoordinatorDelegate
+
+extension MainCoordinator: ListComicsCoordinatorDelegate {
+    func buyComic(_ comic: Comic, _ price: Price) {
+        chartCoordinator?.buyComic(comic, price)
+    }
+    
+    func addComicToChart(_ comic: Comic, _ price: Price) {
+        chartCoordinator?.addComicToChart(comic, price)
     }
 }
