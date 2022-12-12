@@ -23,7 +23,7 @@ class ListComicsService: ListComicsServiceProtocol {
     }
     
     func getComics(completion: @escaping (Result<ComicsResult, HttpError>) -> Void) {
-        let params = HttpParams(path: "/v1/public/comics", queryParams: nil)
+        let params = HttpParams(path: "/v1/public/comics", queryParams: ["startYear": "2022", "limit": "100", "orderBy": "modified"])
         request.get(params, completion: completion)
     }
 }
