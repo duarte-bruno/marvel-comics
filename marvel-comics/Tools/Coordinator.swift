@@ -9,6 +9,5 @@ import Foundation
 import UIKit
 
 protocol Coordinator {
-    var navigationController: UINavigationController { get }
-    var title: String { get }
+    var initialController: UIViewController { get }
 }

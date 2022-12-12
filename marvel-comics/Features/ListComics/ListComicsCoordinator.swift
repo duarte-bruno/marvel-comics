@@ -9,23 +9,40 @@ import UIKit
 
 class ListComicsCoordinator: Coordinator {
     
+    var initialController: UIViewController {
+        return navigationController
+    }
+    
     private enum Screen {
         case listComics
         case comicDetail(_ comic: Comic)
     }
     
-    let navigationController: UINavigationController
+    private let navigationController: UINavigationController
     private let httpRequest: HttpRequest
     
     var title: String {
         return Str.ListComicsTitle.l()
     }
     
+    // MARK: - Initialization
+    
     init() {
         self.navigationController = UINavigationController()
         self.httpRequest = UrlSessionRequest(ProdAppConfig.shared)
         
+        setupTabBarItem()
         setupNavigation()
+    }
+    
+    // MARK: - Private methods
+    
+    private func setupTabBarItem() {
+        let listComicsItem = UITabBarItem(
+            title: title,
+            image: UIImage(systemName: "person.2.crop.square.stack"),
+            selectedImage: UIImage(systemName: "person.2.crop.square.stack.fill"))
+        navigationController.tabBarItem = listComicsItem
     }
     
     private func setupNavigation() {

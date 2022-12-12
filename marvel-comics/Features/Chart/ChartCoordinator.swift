@@ -9,20 +9,37 @@ import UIKit
 
 class ChartCoordinator: Coordinator {
     
+    var initialController: UIViewController {
+        return navigationController
+    }
+    
     private enum Screen {
         case chartList
     }
     
-    let navigationController: UINavigationController
+    private let navigationController: UINavigationController
     
     var title: String {
         return Str.ChartListTitle.l()
     }
+    
+    // MARK: - Initialization
  
     init() {
         self.navigationController = UINavigationController()
         
+        setupTabBarItem()
         setupNavigation()
+    }
+    
+    // MARK: - Private methods
+    
+    private func setupTabBarItem() {
+        let listComicsItem = UITabBarItem(
+            title: title,
+            image: UIImage(systemName: "cart"),
+            selectedImage: UIImage(systemName: "cart.fill"))
+        navigationController.tabBarItem = listComicsItem
     }
     
     private func setupNavigation() {

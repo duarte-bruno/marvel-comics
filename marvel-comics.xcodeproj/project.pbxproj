@@ -61,6 +61,8 @@
 		75BE2A1629475026007F0EDB /* ChartListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A1429475026007F0EDB /* ChartListView.swift */; };
 		75BE2A182947509B007F0EDB /* ChartItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A172947509B007F0EDB /* ChartItemTableViewCell.swift */; };
 		75BE2A192947509B007F0EDB /* ChartItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A172947509B007F0EDB /* ChartItemTableViewCell.swift */; };
+		75BE2A1C29476D8D007F0EDB /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A1B29476D8D007F0EDB /* MainCoordinator.swift */; };
+		75BE2A1D29476D8D007F0EDB /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A1B29476D8D007F0EDB /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +108,7 @@
 		75BE2A1129474F92007F0EDB /* ChartListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartListViewController.swift; sourceTree = "<group>"; };
 		75BE2A1429475026007F0EDB /* ChartListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartListView.swift; sourceTree = "<group>"; };
 		75BE2A172947509B007F0EDB /* ChartItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartItemTableViewCell.swift; sourceTree = "<group>"; };
+		75BE2A1B29476D8D007F0EDB /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,7 +215,6 @@
 		75AEEFD92942C3F7005B7ABD /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				75AEEFDC2942D683005B7ABD /* TabBarViewController.swift */,
 				75AEEFE22943FE01005B7ABD /* Service */,
 				75AEEFE529441DB9005B7ABD /* AppConfiguration.swift */,
 				75AEEFF829457B82005B7ABD /* Coordinator.swift */,
@@ -224,6 +226,7 @@
 		75AEEFDA2942C432005B7ABD /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				75BE2A1A29476A12007F0EDB /* Main */,
 				75BE2A0229473CAA007F0EDB /* Chart */,
 				75AEEFDB2942CE9B005B7ABD /* ListComics */,
 			);
@@ -388,6 +391,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		75BE2A1A29476A12007F0EDB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				75BE2A1E29477250007F0EDB /* Controllers */,
+				75BE2A1B29476D8D007F0EDB /* MainCoordinator.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		75BE2A1E29477250007F0EDB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				75AEEFDC2942D683005B7ABD /* TabBarViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -505,6 +525,7 @@
 				75AEF02529468A42005B7ABD /* ComicsListView.swift in Sources */,
 				75BE29FD2946E6A6007F0EDB /* ComicDetailViewController.swift in Sources */,
 				75AEEFE12943FC32005B7ABD /* HttpRequest.swift in Sources */,
+				75BE2A1C29476D8D007F0EDB /* MainCoordinator.swift in Sources */,
 				75BE2A002946E6C2007F0EDB /* ComicDetailViewModel.swift in Sources */,
 				75BE2A092947458B007F0EDB /* ChartItem.swift in Sources */,
 				75BE2A1229474F92007F0EDB /* ChartListViewController.swift in Sources */,
@@ -536,6 +557,7 @@
 				75AEF02629468A42005B7ABD /* ComicsListView.swift in Sources */,
 				75BE29FE2946E6A6007F0EDB /* ComicDetailViewController.swift in Sources */,
 				75AEF00A29465A1F005B7ABD /* ListComicsCoordinator.swift in Sources */,
+				75BE2A1D29476D8D007F0EDB /* MainCoordinator.swift in Sources */,
 				75BE2A012946E6C2007F0EDB /* ComicDetailViewModel.swift in Sources */,
 				75BE2A0A2947458B007F0EDB /* ChartItem.swift in Sources */,
 				75BE2A1329474F92007F0EDB /* ChartListViewController.swift in Sources */,
