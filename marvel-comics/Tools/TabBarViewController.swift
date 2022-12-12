@@ -10,7 +10,7 @@ import UIKit
 class TabBarViewController: UITabBarController {
 
     let listComicsCoordinator = ListComicsCoordinator()
-    let listComicsCoordinator2 = ListComicsCoordinator()
+    let chartCoordinator = ChartCoordinator()
     
     // MARK: - Object lifecycle
 
@@ -29,13 +29,13 @@ class TabBarViewController: UITabBarController {
             selectedImage: UIImage(systemName: "books.vertical"))
         listComicsCoordinator.navigationController.tabBarItem = listComicsItem
         
-        let listComicsItem2 = UITabBarItem(
-            title: listComicsCoordinator2.title,
-            image: UIImage(systemName: "books.vertical"),
-            selectedImage: UIImage(systemName: "books.vertical"))
-        listComicsCoordinator2.navigationController.tabBarItem = listComicsItem2
+        let chartItem = UITabBarItem(
+            title: chartCoordinator.title,
+            image: UIImage(systemName: "cart"),
+            selectedImage: UIImage(systemName: "cart"))
+        chartCoordinator.navigationController.tabBarItem = chartItem
 
-        self.viewControllers = [listComicsCoordinator.navigationController, listComicsCoordinator2.navigationController]
+        self.viewControllers = [listComicsCoordinator.navigationController, chartCoordinator.navigationController]
         self.selectedViewController = listComicsCoordinator.navigationController
         self.selectedIndex = 0
         self.tabBar.barStyle = .default

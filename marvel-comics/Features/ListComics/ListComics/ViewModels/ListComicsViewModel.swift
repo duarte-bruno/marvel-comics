@@ -51,7 +51,7 @@ class ListComicsViewModel: ListComicsViewModelProtocol {
                 self?.delegate?.comicsResultUpdated()
             case .failure(let error):
                 print(error.description)
-                switch error { 
+                switch error {
                 case .transportError:
                     self?.delegate?.showErrorAlert(title: Str.TransportErrorTitle.l(), message: Str.TransportErrorMessage.l())
                 default:

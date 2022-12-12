@@ -37,4 +37,8 @@ enum Str: String {
     // MARK: - ComicDetail
     
     case ComicDetailTitle
+    
+    // MARK: - ChartList
+    
+    case ChartListTitle
 }
