@@ -39,6 +39,12 @@
 		75AEF02029467C55005B7ABD /* Default.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75AEF01E29467C55005B7ABD /* Default.strings */; };
 		75AEF02229467D6E005B7ABD /* Str.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEF02129467D6E005B7ABD /* Str.swift */; };
 		75AEF02329467D6E005B7ABD /* Str.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEF02129467D6E005B7ABD /* Str.swift */; };
+		75AEF02529468A42005B7ABD /* ComicsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEF02429468A42005B7ABD /* ComicsListView.swift */; };
+		75AEF02629468A42005B7ABD /* ComicsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEF02429468A42005B7ABD /* ComicsListView.swift */; };
+		75AEF028294697A7005B7ABD /* ComicsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEF027294697A7005B7ABD /* ComicsCollectionViewCell.swift */; };
+		75AEF029294697A7005B7ABD /* ComicsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AEF027294697A7005B7ABD /* ComicsCollectionViewCell.swift */; };
+		75BE29F72946AAA0007F0EDB /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE29F62946AAA0007F0EDB /* CustomImageView.swift */; };
+		75BE29F82946AAA0007F0EDB /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE29F62946AAA0007F0EDB /* CustomImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +79,9 @@
 		75AEF012294663B2005B7ABD /* ComicResult.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ComicResult.json; sourceTree = "<group>"; };
 		75AEF01E29467C55005B7ABD /* Default.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Default.strings; sourceTree = "<group>"; };
 		75AEF02129467D6E005B7ABD /* Str.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Str.swift; sourceTree = "<group>"; };
+		75AEF02429468A42005B7ABD /* ComicsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsListView.swift; sourceTree = "<group>"; };
+		75AEF027294697A7005B7ABD /* ComicsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsCollectionViewCell.swift; sourceTree = "<group>"; };
+		75BE29F62946AAA0007F0EDB /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +179,8 @@
 		75AEEFD7294161AB005B7ABD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				75AEF02429468A42005B7ABD /* ComicsListView.swift */,
+				75AEF027294697A7005B7ABD /* ComicsCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,6 +192,7 @@
 				75AEEFE22943FE01005B7ABD /* Service */,
 				75AEEFE529441DB9005B7ABD /* AppConfiguration.swift */,
 				75AEEFF829457B82005B7ABD /* Coordinator.swift */,
+				75BE29F62946AAA0007F0EDB /* CustomImageView.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -382,7 +394,10 @@
 				75AEEFDD2942D683005B7ABD /* TabBarViewController.swift in Sources */,
 				75AEEFEB294500CB005B7ABD /* ComicsResult.swift in Sources */,
 				75AEEFE92944FEA8005B7ABD /* ListComicsService.swift in Sources */,
+				75AEF02529468A42005B7ABD /* ComicsListView.swift in Sources */,
 				75AEEFE12943FC32005B7ABD /* HttpRequest.swift in Sources */,
+				75AEF028294697A7005B7ABD /* ComicsCollectionViewCell.swift in Sources */,
+				75BE29F72946AAA0007F0EDB /* CustomImageView.swift in Sources */,
 				75AEEFDF2942DC8E005B7ABD /* ListComicsViewController.swift in Sources */,
 				75AEEFF929457B82005B7ABD /* Coordinator.swift in Sources */,
 				75AEEFE42943FE59005B7ABD /* UrlSessionRequest.swift in Sources */,
@@ -402,7 +417,10 @@
 				75AEF00929465A1C005B7ABD /* ListComicsService.swift in Sources */,
 				75AEF00829465A14005B7ABD /* ComicsResult.swift in Sources */,
 				75AEF00E29465A2F005B7ABD /* TabBarViewController.swift in Sources */,
+				75AEF02629468A42005B7ABD /* ComicsListView.swift in Sources */,
 				75AEF00A29465A1F005B7ABD /* ListComicsCoordinator.swift in Sources */,
+				75AEF029294697A7005B7ABD /* ComicsCollectionViewCell.swift in Sources */,
+				75BE29F82946AAA0007F0EDB /* CustomImageView.swift in Sources */,
 				75AEF00729465A12005B7ABD /* Comic.swift in Sources */,
 				75AEF00C29465A27005B7ABD /* AppConfiguration.swift in Sources */,
 				75AEF00629465A0E005B7ABD /* ListComicsViewController.swift in Sources */,

@@ -17,6 +17,10 @@ class ListComicsCoordinator: Coordinator {
     let navigationController: UINavigationController
     private let httpRequest: HttpRequest
     
+    var title: String {
+        return Str.ListComicsTitle.l()
+    }
+    
     init() {
         self.navigationController = UINavigationController()
         self.httpRequest = UrlSessionRequest(ProdAppConfig.shared)

@@ -19,19 +19,25 @@ class TabBarViewController: UITabBarController {
     // MARK: - Setup
 
     private func setup() {
+        let listComicsCoordinator = ListComicsCoordinator()
         let listComicsItem = UITabBarItem(
-            title: "Comics",
+            title: listComicsCoordinator.title,
             image: UIImage(systemName: "books.vertical"),
             selectedImage: UIImage(systemName: "books.vertical"))
-        
-        let listComicsCoordinator = ListComicsCoordinator()
         listComicsCoordinator.navigationController.tabBarItem = listComicsItem
+        
+        let listComicsCoordinator2 = ListComicsCoordinator()
+        let listComicsItem2 = UITabBarItem(
+            title: listComicsCoordinator2.title,
+            image: UIImage(systemName: "books.vertical"),
+            selectedImage: UIImage(systemName: "books.vertical"))
+        listComicsCoordinator2.navigationController.tabBarItem = listComicsItem2
 
-        self.viewControllers = [listComicsCoordinator.navigationController]
+        self.viewControllers = [listComicsCoordinator.navigationController, listComicsCoordinator2.navigationController]
         self.selectedViewController = listComicsCoordinator.navigationController
         self.selectedIndex = 0
         self.tabBar.barStyle = .default
-        self.tabBar.tintColor = .black
-        self.tabBar.unselectedItemTintColor = .darkGray
+        self.tabBar.tintColor = .red
+        self.tabBar.unselectedItemTintColor = .black
     }
 }

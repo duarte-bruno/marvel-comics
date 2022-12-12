@@ -1,5 +1,7 @@
 // MARK: - Global
 
+"InitCoderNotImplemented" = "init(coder:) has not been implemented.";
+
 "TransportErrorTitle" = "Ops";
 "TransportErrorMessage" = "Ocorreu um erro de conexão, por favor verifique a sua conexão ou tente novamente mais tarde.";
 

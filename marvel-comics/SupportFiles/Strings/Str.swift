@@ -22,6 +22,8 @@ enum Str: String {
     
     // MARK: - Global
     
+    case InitCoderNotImplemented
+    
     case TransportErrorTitle
     case TransportErrorMessage
     
