@@ -18,6 +18,20 @@ struct Comic: Codable {
     let thumbnail: Thumbnail
     let images: [Thumbnail]
     let creators: Creators
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case digitalId
+        case title
+        case issueNumber
+        case variantDescription
+        case resultDescription = "description"
+        case pageCount
+        case prices
+        case thumbnail
+        case images
+        case creators
+    }
 }
 
 // MARK: - Creators

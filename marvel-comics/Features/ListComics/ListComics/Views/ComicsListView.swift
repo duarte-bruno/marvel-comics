@@ -9,6 +9,7 @@ import UIKit
 
 protocol ComicsListViewDelegate: AnyObject {
     func refreshComicsListContent()
+    func comicSelected(comic: Comic)
 }
 
 class ComicsListView: UIView {
@@ -115,5 +116,9 @@ extension ComicsListView: UICollectionViewDataSource {
         
         cell.setupCell(with: comics[indexPath.row])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.comicSelected(comic: comics[indexPath.row])
     }
 }
