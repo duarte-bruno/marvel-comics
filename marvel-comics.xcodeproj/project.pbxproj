@@ -63,6 +63,14 @@
 		75BE2A192947509B007F0EDB /* ChartItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A172947509B007F0EDB /* ChartItemTableViewCell.swift */; };
 		75BE2A1C29476D8D007F0EDB /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A1B29476D8D007F0EDB /* MainCoordinator.swift */; };
 		75BE2A1D29476D8D007F0EDB /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A1B29476D8D007F0EDB /* MainCoordinator.swift */; };
+		75BE2A212947A27B007F0EDB /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A202947A27B007F0EDB /* DataStore.swift */; };
+		75BE2A222947A27B007F0EDB /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A202947A27B007F0EDB /* DataStore.swift */; };
+		75BE2A242947A393007F0EDB /* UserDefaultsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A232947A393007F0EDB /* UserDefaultsDataStore.swift */; };
+		75BE2A252947A393007F0EDB /* UserDefaultsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A232947A393007F0EDB /* UserDefaultsDataStore.swift */; };
+		75BE2A282947A994007F0EDB /* CartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A272947A994007F0EDB /* CartService.swift */; };
+		75BE2A292947A994007F0EDB /* CartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A272947A994007F0EDB /* CartService.swift */; };
+		75BE2A2B2947B961007F0EDB /* TotalCartValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A2A2947B961007F0EDB /* TotalCartValueView.swift */; };
+		75BE2A2C2947B961007F0EDB /* TotalCartValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A2A2947B961007F0EDB /* TotalCartValueView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +117,10 @@
 		75BE2A1429475026007F0EDB /* ChartListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartListView.swift; sourceTree = "<group>"; };
 		75BE2A172947509B007F0EDB /* ChartItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartItemTableViewCell.swift; sourceTree = "<group>"; };
 		75BE2A1B29476D8D007F0EDB /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		75BE2A202947A27B007F0EDB /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		75BE2A232947A393007F0EDB /* UserDefaultsDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsDataStore.swift; sourceTree = "<group>"; };
+		75BE2A272947A994007F0EDB /* CartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartService.swift; sourceTree = "<group>"; };
+		75BE2A2A2947B961007F0EDB /* TotalCartValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCartValueView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +227,7 @@
 		75AEEFD92942C3F7005B7ABD /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				75BE2A1F2947A25C007F0EDB /* DataStore */,
 				75AEEFE22943FE01005B7ABD /* Service */,
 				75AEEFE529441DB9005B7ABD /* AppConfiguration.swift */,
 				75AEEFF829457B82005B7ABD /* Coordinator.swift */,
@@ -350,6 +363,7 @@
 		75BE2A06294741AF007F0EDB /* ChartList */ = {
 			isa = PBXGroup;
 			children = (
+				75BE2A262947A957007F0EDB /* Services */,
 				75BE2A1029474EF5007F0EDB /* Views */,
 				75BE2A072947457B007F0EDB /* Models */,
 				75BE2A0B29474609007F0EDB /* ViewModels */,
@@ -387,6 +401,7 @@
 			children = (
 				75BE2A1429475026007F0EDB /* ChartListView.swift */,
 				75BE2A172947509B007F0EDB /* ChartItemTableViewCell.swift */,
+				75BE2A2A2947B961007F0EDB /* TotalCartValueView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -406,6 +421,23 @@
 				75AEEFDC2942D683005B7ABD /* TabBarViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		75BE2A1F2947A25C007F0EDB /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				75BE2A202947A27B007F0EDB /* DataStore.swift */,
+				75BE2A232947A393007F0EDB /* UserDefaultsDataStore.swift */,
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
+		75BE2A262947A957007F0EDB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				75BE2A272947A994007F0EDB /* CartService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -513,11 +545,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				75AEEFFC29457C7F005B7ABD /* ListComicsCoordinator.swift in Sources */,
+				75BE2A2B2947B961007F0EDB /* TotalCartValueView.swift in Sources */,
 				75AEF02229467D6E005B7ABD /* Str.swift in Sources */,
+				75BE2A242947A393007F0EDB /* UserDefaultsDataStore.swift in Sources */,
 				75AEEFE629441DB9005B7ABD /* AppConfiguration.swift in Sources */,
 				75BE2A182947509B007F0EDB /* ChartItemTableViewCell.swift in Sources */,
 				75AEEFDD2942D683005B7ABD /* TabBarViewController.swift in Sources */,
 				75BE2A0429473CCE007F0EDB /* ChartCoordinator.swift in Sources */,
+				75BE2A282947A994007F0EDB /* CartService.swift in Sources */,
 				75AEEFEB294500CB005B7ABD /* ComicsResult.swift in Sources */,
 				75BE2A0D29474630007F0EDB /* ChartListViewModel.swift in Sources */,
 				75BE2A1529475026007F0EDB /* ChartListView.swift in Sources */,
@@ -525,6 +560,7 @@
 				75AEF02529468A42005B7ABD /* ComicsListView.swift in Sources */,
 				75BE29FD2946E6A6007F0EDB /* ComicDetailViewController.swift in Sources */,
 				75AEEFE12943FC32005B7ABD /* HttpRequest.swift in Sources */,
+				75BE2A212947A27B007F0EDB /* DataStore.swift in Sources */,
 				75BE2A1C29476D8D007F0EDB /* MainCoordinator.swift in Sources */,
 				75BE2A002946E6C2007F0EDB /* ComicDetailViewModel.swift in Sources */,
 				75BE2A092947458B007F0EDB /* ChartItem.swift in Sources */,
@@ -545,11 +581,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				75AEF00529465989005B7ABD /* ListComicsViewModel.swift in Sources */,
+				75BE2A2C2947B961007F0EDB /* TotalCartValueView.swift in Sources */,
 				75AEF02329467D6E005B7ABD /* Str.swift in Sources */,
+				75BE2A252947A393007F0EDB /* UserDefaultsDataStore.swift in Sources */,
 				75AEF004294655D9005B7ABD /* ListComicsViewModelTests.swift in Sources */,
 				75BE2A192947509B007F0EDB /* ChartItemTableViewCell.swift in Sources */,
 				75AEF00929465A1C005B7ABD /* ListComicsService.swift in Sources */,
 				75BE2A0529473CCE007F0EDB /* ChartCoordinator.swift in Sources */,
+				75BE2A292947A994007F0EDB /* CartService.swift in Sources */,
 				75AEF00829465A14005B7ABD /* ComicsResult.swift in Sources */,
 				75BE2A0E29474630007F0EDB /* ChartListViewModel.swift in Sources */,
 				75BE2A1629475026007F0EDB /* ChartListView.swift in Sources */,
@@ -557,6 +596,7 @@
 				75AEF02629468A42005B7ABD /* ComicsListView.swift in Sources */,
 				75BE29FE2946E6A6007F0EDB /* ComicDetailViewController.swift in Sources */,
 				75AEF00A29465A1F005B7ABD /* ListComicsCoordinator.swift in Sources */,
+				75BE2A222947A27B007F0EDB /* DataStore.swift in Sources */,
 				75BE2A1D29476D8D007F0EDB /* MainCoordinator.swift in Sources */,
 				75BE2A012946E6C2007F0EDB /* ComicDetailViewModel.swift in Sources */,
 				75BE2A0A2947458B007F0EDB /* ChartItem.swift in Sources */,
