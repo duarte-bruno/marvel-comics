@@ -10,16 +10,20 @@ import UIKit
 class ListComicsViewController: UIViewController {
     
     private var viewModel: ListComicsViewModelProtocol
+    private var comicsListView: ComicsListView? = nil
+    
+    // MARK: - Initialization
     
     init(viewModel: ListComicsViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         
+        self.comicsListView = ComicsListView(delegate: self)
         self.viewModel.delegate = self
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError(Str.InitCoderNotImplemented.l())
     }
     
     override func loadView() {
@@ -31,13 +35,28 @@ class ListComicsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupComicsView()
         viewModel.updateComicsResult()
+    }
+    
+    // MARK: - Private methods
+    
+    private func setupComicsView() {
+        guard let comicsListView = comicsListView else { return }
+        view.addSubview(comicsListView)
+        
+        NSLayoutConstraint.activate([
+            comicsListView.leftAnchor.constraint(equalTo: view.layoutMarginsGuide.leftAnchor),
+            comicsListView.rightAnchor.constraint(equalTo: view.layoutMarginsGuide.rightAnchor),
+            comicsListView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
+            comicsListView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor),
+        ])
     }
 }
 
 extension ListComicsViewController: ListComicsViewModelDelegate {
     func comicsResultUpdated() {
-        print(viewModel.comicsResult?.data.count ?? "")
+        comicsListView?.updateComicsList(comics: viewModel.comicsResult?.data.results ?? [])
     }
     
     func showErrorAlert(title: String, message: String) {
@@ -48,5 +67,11 @@ extension ListComicsViewController: ListComicsViewModelDelegate {
             }))
             self.present(alert, animated: true, completion: nil)
         }
+    }
+}
+
+extension ListComicsViewController: ComicsListViewDelegate {
+    func refreshComicsListContent() {
+        
     }
 }

@@ -44,6 +44,16 @@ struct Thumbnail: Codable {
         case path
         case thumbnailExtension = "extension"
     }
+    
+    enum ThumbSize: String {
+        case portrait_uncanny
+    }
+    
+    func thumbUrl(size: ThumbSize) -> String {
+        var url = path.replacingOccurrences(of: "http://", with: "https://")
+        url = url + "/\(size.rawValue)." + thumbnailExtension
+        return url
+    }
 }
 
 // MARK: - Price

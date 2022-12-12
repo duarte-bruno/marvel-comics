@@ -40,7 +40,7 @@ class ListComicsViewModel: ListComicsViewModelProtocol {
         self.service = service
         self.coordinatorDelegate = coordinatorDelegate
         self.comicsResult = nil
-        self.title = Str.TransportErrorTitle.l()
+        self.title = Str.ListComicsTitle.l()
     }
     
     func updateComicsResult() {
