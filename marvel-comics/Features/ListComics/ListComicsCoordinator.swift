@@ -5,7 +5,6 @@
 //  Created by Bruno Duarte on 10/12/22.
 //
 
-import Foundation
 import UIKit
 
 class ListComicsCoordinator: Coordinator {
