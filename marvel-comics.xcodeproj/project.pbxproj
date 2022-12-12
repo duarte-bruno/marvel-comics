@@ -71,6 +71,12 @@
 		75BE2A292947A994007F0EDB /* CartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A272947A994007F0EDB /* CartService.swift */; };
 		75BE2A2B2947B961007F0EDB /* TotalCartValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A2A2947B961007F0EDB /* TotalCartValueView.swift */; };
 		75BE2A2C2947B961007F0EDB /* TotalCartValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A2A2947B961007F0EDB /* TotalCartValueView.swift */; };
+		75BE2A2F2947C834007F0EDB /* LibraryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A2E2947C834007F0EDB /* LibraryCoordinator.swift */; };
+		75BE2A302947C834007F0EDB /* LibraryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A2E2947C834007F0EDB /* LibraryCoordinator.swift */; };
+		75BE2A342947CBEF007F0EDB /* ListLibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A332947CBEF007F0EDB /* ListLibraryViewModel.swift */; };
+		75BE2A352947CBEF007F0EDB /* ListLibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A332947CBEF007F0EDB /* ListLibraryViewModel.swift */; };
+		75BE2A382947CC52007F0EDB /* ListLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A372947CC52007F0EDB /* ListLibraryViewController.swift */; };
+		75BE2A392947CC52007F0EDB /* ListLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A372947CC52007F0EDB /* ListLibraryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +127,9 @@
 		75BE2A232947A393007F0EDB /* UserDefaultsDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsDataStore.swift; sourceTree = "<group>"; };
 		75BE2A272947A994007F0EDB /* CartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartService.swift; sourceTree = "<group>"; };
 		75BE2A2A2947B961007F0EDB /* TotalCartValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCartValueView.swift; sourceTree = "<group>"; };
+		75BE2A2E2947C834007F0EDB /* LibraryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCoordinator.swift; sourceTree = "<group>"; };
+		75BE2A332947CBEF007F0EDB /* ListLibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLibraryViewModel.swift; sourceTree = "<group>"; };
+		75BE2A372947CC52007F0EDB /* ListLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLibraryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				75BE2A1A29476A12007F0EDB /* Main */,
+				75BE2A2D2947C812007F0EDB /* Library */,
 				75BE2A0229473CAA007F0EDB /* Chart */,
 				75AEEFDB2942CE9B005B7ABD /* ListComics */,
 			);
@@ -440,6 +450,40 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		75BE2A2D2947C812007F0EDB /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				75BE2A312947CBB5007F0EDB /* ListLibrary */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		75BE2A312947CBB5007F0EDB /* ListLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				75BE2A2E2947C834007F0EDB /* LibraryCoordinator.swift */,
+				75BE2A362947CC24007F0EDB /* Controllers */,
+				75BE2A322947CBC9007F0EDB /* ViewModels */,
+			);
+			path = ListLibrary;
+			sourceTree = "<group>";
+		};
+		75BE2A322947CBC9007F0EDB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				75BE2A332947CBEF007F0EDB /* ListLibraryViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		75BE2A362947CC24007F0EDB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				75BE2A372947CC52007F0EDB /* ListLibraryViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -544,6 +588,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75BE2A2F2947C834007F0EDB /* LibraryCoordinator.swift in Sources */,
 				75AEEFFC29457C7F005B7ABD /* ListComicsCoordinator.swift in Sources */,
 				75BE2A2B2947B961007F0EDB /* TotalCartValueView.swift in Sources */,
 				75AEF02229467D6E005B7ABD /* Str.swift in Sources */,
@@ -553,6 +598,7 @@
 				75AEEFDD2942D683005B7ABD /* TabBarViewController.swift in Sources */,
 				75BE2A0429473CCE007F0EDB /* ChartCoordinator.swift in Sources */,
 				75BE2A282947A994007F0EDB /* CartService.swift in Sources */,
+				75BE2A382947CC52007F0EDB /* ListLibraryViewController.swift in Sources */,
 				75AEEFEB294500CB005B7ABD /* ComicsResult.swift in Sources */,
 				75BE2A0D29474630007F0EDB /* ChartListViewModel.swift in Sources */,
 				75BE2A1529475026007F0EDB /* ChartListView.swift in Sources */,
@@ -561,6 +607,7 @@
 				75BE29FD2946E6A6007F0EDB /* ComicDetailViewController.swift in Sources */,
 				75AEEFE12943FC32005B7ABD /* HttpRequest.swift in Sources */,
 				75BE2A212947A27B007F0EDB /* DataStore.swift in Sources */,
+				75BE2A342947CBEF007F0EDB /* ListLibraryViewModel.swift in Sources */,
 				75BE2A1C29476D8D007F0EDB /* MainCoordinator.swift in Sources */,
 				75BE2A002946E6C2007F0EDB /* ComicDetailViewModel.swift in Sources */,
 				75BE2A092947458B007F0EDB /* ChartItem.swift in Sources */,
@@ -580,6 +627,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75BE2A302947C834007F0EDB /* LibraryCoordinator.swift in Sources */,
 				75AEF00529465989005B7ABD /* ListComicsViewModel.swift in Sources */,
 				75BE2A2C2947B961007F0EDB /* TotalCartValueView.swift in Sources */,
 				75AEF02329467D6E005B7ABD /* Str.swift in Sources */,
@@ -589,6 +637,7 @@
 				75AEF00929465A1C005B7ABD /* ListComicsService.swift in Sources */,
 				75BE2A0529473CCE007F0EDB /* ChartCoordinator.swift in Sources */,
 				75BE2A292947A994007F0EDB /* CartService.swift in Sources */,
+				75BE2A392947CC52007F0EDB /* ListLibraryViewController.swift in Sources */,
 				75AEF00829465A14005B7ABD /* ComicsResult.swift in Sources */,
 				75BE2A0E29474630007F0EDB /* ChartListViewModel.swift in Sources */,
 				75BE2A1629475026007F0EDB /* ChartListView.swift in Sources */,
@@ -597,6 +646,7 @@
 				75BE29FE2946E6A6007F0EDB /* ComicDetailViewController.swift in Sources */,
 				75AEF00A29465A1F005B7ABD /* ListComicsCoordinator.swift in Sources */,
 				75BE2A222947A27B007F0EDB /* DataStore.swift in Sources */,
+				75BE2A352947CBEF007F0EDB /* ListLibraryViewModel.swift in Sources */,
 				75BE2A1D29476D8D007F0EDB /* MainCoordinator.swift in Sources */,
 				75BE2A012946E6C2007F0EDB /* ComicDetailViewModel.swift in Sources */,
 				75BE2A0A2947458B007F0EDB /* ChartItem.swift in Sources */,

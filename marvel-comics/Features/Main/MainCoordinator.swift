@@ -17,6 +17,7 @@ class MainCoordinator: Coordinator {
     
     private var listComicsCoordinator: ListComicsCoordinator? = nil
     private var chartCoordinator: ChartCoordinator? = nil
+    private var libraryCoordinator: LibraryCoordinator? = nil
     
     // MARK: - Initialization
     
@@ -30,13 +31,14 @@ class MainCoordinator: Coordinator {
     private func setupCoordinators() {
         self.listComicsCoordinator = ListComicsCoordinator(delegate: self)
         self.chartCoordinator = ChartCoordinator()
+        self.libraryCoordinator = LibraryCoordinator()
     }
     
     private func setupTabBarController() {
-        guard let listComicsCoordinator = listComicsCoordinator, let chartCoordinator = chartCoordinator else { return }
+        guard let listComicsCoordinator = listComicsCoordinator, let chartCoordinator = chartCoordinator, let libraryCoordinator = libraryCoordinator else { return }
         
         self.tabBarViewController = TabBarViewController(
-            controllers: [listComicsCoordinator.initialController, chartCoordinator.initialController],
+            controllers: [listComicsCoordinator.initialController, chartCoordinator.initialController, libraryCoordinator.initialController],
             selected: listComicsCoordinator.initialController)
     }
 }

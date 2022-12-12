@@ -47,4 +47,8 @@ enum Str: String {
     // MARK: - ChartList
     
     case ChartListTitle
+    
+    // MARK: - Library
+    
+    case ListLibraryTitle
 }
