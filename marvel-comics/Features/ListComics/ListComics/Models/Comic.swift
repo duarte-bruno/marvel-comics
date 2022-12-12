@@ -18,6 +18,20 @@ struct Comic: Codable {
     let thumbnail: Thumbnail
     let images: [Thumbnail]
     let creators: Creators
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case digitalId
+        case title
+        case issueNumber
+        case variantDescription
+        case resultDescription = "description"
+        case pageCount
+        case prices
+        case thumbnail
+        case images
+        case creators
+    }
 }
 
 // MARK: - Creators
@@ -59,6 +73,20 @@ struct Thumbnail: Codable {
 
 // MARK: - Price
 struct Price: Codable {
-    let type: String
+    let type: PriceType
     let price: Double
+    
+    enum PriceType: String, Codable {
+        case printPrice
+        case digitalPrice
+        
+        func label() -> String {
+            switch self {
+            case .printPrice:
+                return "Printed"
+            case .digitalPrice:
+                return "Digital"
+            }
+        }
+    }
 }

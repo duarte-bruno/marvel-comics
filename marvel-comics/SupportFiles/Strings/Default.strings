@@ -11,3 +11,7 @@
 // MARK: - ListComics
 
 "ListComicsTitle" = "Quadrinhos";
+
+// MARK: - ComicDetail
+
+"ComicDetailTitle" = "Detalhes";

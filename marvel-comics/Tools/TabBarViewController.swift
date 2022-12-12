@@ -9,6 +9,9 @@ import UIKit
 
 class TabBarViewController: UITabBarController {
 
+    let listComicsCoordinator = ListComicsCoordinator()
+    let listComicsCoordinator2 = ListComicsCoordinator()
+    
     // MARK: - Object lifecycle
 
     override func viewDidLoad() {
@@ -19,14 +22,13 @@ class TabBarViewController: UITabBarController {
     // MARK: - Setup
 
     private func setup() {
-        let listComicsCoordinator = ListComicsCoordinator()
+        
         let listComicsItem = UITabBarItem(
             title: listComicsCoordinator.title,
             image: UIImage(systemName: "books.vertical"),
             selectedImage: UIImage(systemName: "books.vertical"))
         listComicsCoordinator.navigationController.tabBarItem = listComicsItem
         
-        let listComicsCoordinator2 = ListComicsCoordinator()
         let listComicsItem2 = UITabBarItem(
             title: listComicsCoordinator2.title,
             image: UIImage(systemName: "books.vertical"),

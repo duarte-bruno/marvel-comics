@@ -12,6 +12,7 @@ class ListComicsCoordinator: Coordinator {
     
     private enum Screen {
         case listComics
+        case comicDetail(_ comic: Comic)
     }
     
     let navigationController: UINavigationController
@@ -45,6 +46,10 @@ class ListComicsCoordinator: Coordinator {
             let viewModel = ListComicsViewModel(service: service, coordinatorDelegate: self)
             let controller = ListComicsViewController(viewModel: viewModel)
             return controller
+        case .comicDetail(let comic):
+            let viewModel = ComicDetailViewModel(comic: comic, coordinatorDelegate: self)
+            let controller = ComicDetailViewController(viewModel: viewModel)
+            return controller
         }
     }
     
@@ -55,6 +60,16 @@ class ListComicsCoordinator: Coordinator {
                                                     
 extension ListComicsCoordinator: ListComicsViewModelCoordinatorDelegate {
     func showComicDetail(_ comic: Comic) {
-        showNext(screen: .listComics)
+        showNext(screen: .comicDetail(comic))
+    }
+}
+
+extension ListComicsCoordinator: ComicDetailViewModelCoordinatorDelegate {
+    func buyComic(_ comic: Comic, _ price: Price) {
+        
+    }
+    
+    func addComicToChart(_ comic: Comic, _ price: Price) {
+        
     }
 }

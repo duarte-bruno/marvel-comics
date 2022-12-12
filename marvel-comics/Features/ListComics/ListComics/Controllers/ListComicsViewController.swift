@@ -71,6 +71,10 @@ extension ListComicsViewController: ListComicsViewModelDelegate {
 }
 
 extension ListComicsViewController: ComicsListViewDelegate {
+    func comicSelected(comic: Comic) {
+        viewModel.showComicDetail(comic)
+    }
+    
     func refreshComicsListContent() {
         
     }
