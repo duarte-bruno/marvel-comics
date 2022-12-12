@@ -9,7 +9,7 @@ import UIKit
 
 class ChartListViewController: UIViewController {
     
-    private var viewModel: ChartListViewModelProtocol
+    var viewModel: ChartListViewModelProtocol
     private var chartListView: ChartListView? = nil
     
     // MARK: - Initialization

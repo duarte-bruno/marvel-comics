@@ -49,6 +49,7 @@ class ChartListView: UIView {
         tableView.register(ChartItemTableViewCell.self, forCellReuseIdentifier: ChartItemTableViewCell.cellIdentifier)
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.separatorStyle = .none
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(tableView)

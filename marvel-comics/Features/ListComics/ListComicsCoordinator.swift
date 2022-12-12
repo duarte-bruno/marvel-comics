@@ -7,25 +7,49 @@
 
 import UIKit
 
+protocol ListComicsCoordinatorDelegate: AnyObject {
+    func buyComic(_ comic: Comic, _ price: Price)
+    func addComicToChart(_ comic: Comic, _ price: Price)
+}
+
 class ListComicsCoordinator: Coordinator {
+    
+    var initialController: UIViewController {
+        return navigationController
+    }
     
     private enum Screen {
         case listComics
         case comicDetail(_ comic: Comic)
     }
     
-    let navigationController: UINavigationController
+    private let navigationController: UINavigationController
     private let httpRequest: HttpRequest
+    private weak var delegate: ListComicsCoordinatorDelegate?
     
     var title: String {
         return Str.ListComicsTitle.l()
     }
     
-    init() {
+    // MARK: - Initialization
+    
+    init(delegate: ListComicsCoordinatorDelegate?) {
         self.navigationController = UINavigationController()
         self.httpRequest = UrlSessionRequest(ProdAppConfig.shared)
+        self.delegate = delegate
         
+        setupTabBarItem()
         setupNavigation()
+    }
+    
+    // MARK: - Private methods
+    
+    private func setupTabBarItem() {
+        let listComicsItem = UITabBarItem(
+            title: title,
+            image: UIImage(systemName: "person.2.crop.square.stack"),
+            selectedImage: UIImage(systemName: "person.2.crop.square.stack.fill"))
+        navigationController.tabBarItem = listComicsItem
     }
     
     private func setupNavigation() {
@@ -65,10 +89,10 @@ extension ListComicsCoordinator: ListComicsViewModelCoordinatorDelegate {
 
 extension ListComicsCoordinator: ComicDetailViewModelCoordinatorDelegate {
     func buyComic(_ comic: Comic, _ price: Price) {
-        
+        delegate?.buyComic(comic, price)
     }
     
     func addComicToChart(_ comic: Comic, _ price: Price) {
-        
+        delegate?.addComicToChart(comic, price)
     }
 }

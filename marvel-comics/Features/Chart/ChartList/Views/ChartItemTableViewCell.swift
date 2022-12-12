@@ -20,6 +20,7 @@ class ChartItemTableViewCell: UITableViewCell {
     
     func setupCell(with item: ChartItem) {
         self.item = item
+        contentView.backgroundColor = .white
         setupImage()
         setupLabels()
     }
@@ -37,9 +38,9 @@ class ChartItemTableViewCell: UITableViewCell {
         contentView.addSubview(image)
         
         NSLayoutConstraint.activate([
-            image.leftAnchor.constraint(equalTo: contentView.leftAnchor),
-            image.topAnchor.constraint(equalTo: contentView.topAnchor),
-            image.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            image.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 8),
+            image.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+            image.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
             image.heightAnchor.constraint(equalToConstant: 70),
             image.widthAnchor.constraint(equalTo: image.heightAnchor)
         ])
@@ -47,6 +48,20 @@ class ChartItemTableViewCell: UITableViewCell {
     
     private func setupLabels() {
         guard let item = item else { return }
+        
+        priceLabel.text = "\(item.price.type.label()) U$\(item.price.price)"
+        priceLabel.font = UIFont.systemFont(ofSize: 15, weight: .bold)
+        priceLabel.tintColor = .red
+        priceLabel.textAlignment = .left
+        priceLabel.numberOfLines = 1
+        priceLabel.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(priceLabel)
+        
+        NSLayoutConstraint.activate([
+            priceLabel.leftAnchor.constraint(equalTo: image.rightAnchor, constant: 8),
+            priceLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: 8),
+            priceLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8)
+        ])
         
         titleLabel.text = item.comic.title
         titleLabel.font = UIFont.systemFont(ofSize: 15, weight: .regular)
@@ -56,24 +71,10 @@ class ChartItemTableViewCell: UITableViewCell {
         contentView.addSubview(titleLabel)
         
         NSLayoutConstraint.activate([
-            titleLabel.leftAnchor.constraint(equalTo: image.rightAnchor),
-            titleLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor),
-            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor)
-        ])
-        
-        priceLabel.text = "\(item.price.type.label()) U$\(item.price.price)"
-        priceLabel.font = UIFont.systemFont(ofSize: 13, weight: .medium)
-        priceLabel.tintColor = .red
-        priceLabel.textAlignment = .left
-        priceLabel.numberOfLines = 0
-        priceLabel.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(priceLabel)
-        
-        NSLayoutConstraint.activate([
-            priceLabel.leftAnchor.constraint(equalTo: image.rightAnchor),
-            priceLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor),
-            priceLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: -6),
-            priceLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            titleLabel.leftAnchor.constraint(equalTo: image.rightAnchor, constant: 8),
+            titleLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: 8),
+            titleLabel.topAnchor.constraint(equalTo: priceLabel.bottomAnchor, constant: 6),
+            titleLabel.bottomAnchor.constraint(greaterThanOrEqualTo: contentView.bottomAnchor, constant: -8)
         ])
     }
 }

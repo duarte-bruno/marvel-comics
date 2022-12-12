@@ -38,6 +38,12 @@ enum Str: String {
     
     case ComicDetailTitle
     
+    case AddedToCartTitle
+    case AddedToCartMessage
+
+    case BoughtTitle
+    case BoughtMessage
+    
     // MARK: - ChartList
     
     case ChartListTitle

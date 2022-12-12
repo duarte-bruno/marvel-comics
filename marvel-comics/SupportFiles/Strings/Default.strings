@@ -16,6 +16,12 @@
 
 "ComicDetailTitle" = "Detalhes";
 
+"AddedToCartTitle" = "Added to cart";
+"AddedToCartMessage" = "Comic added to cart successfully.";
+
+"BoughtTitle" = "Purchased";
+"BoughtMessage" = "Successfully purchased comic.";
+
 // MARK: - ChartList
 
 "ChartListTitle" = "Carrinho";
