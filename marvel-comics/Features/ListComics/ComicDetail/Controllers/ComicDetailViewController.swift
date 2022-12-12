@@ -147,6 +147,7 @@ class ComicDetailViewController: UIViewController {
     }
     
     private func setupButtons() {
+        if viewModel.coordinatorDelegate == nil { return }
         let prices = UILabel()
         
         prices.text = "Price"

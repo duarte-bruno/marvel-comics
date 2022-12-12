@@ -18,6 +18,7 @@ protocol ComicDetailViewModelDelegate: AnyObject {
 
 protocol ComicDetailViewModelProtocol {
     var delegate: ComicDetailViewModelDelegate? { get set }
+    var coordinatorDelegate: ComicDetailViewModelCoordinatorDelegate? { get }
     var title: String { get }
     var comic: Comic { get }
     
@@ -30,10 +31,9 @@ protocol ComicDetailViewModelProtocol {
 class ComicDetailViewModel: ComicDetailViewModelProtocol {
     
     weak var delegate: ComicDetailViewModelDelegate?
+    let coordinatorDelegate: ComicDetailViewModelCoordinatorDelegate?
     var title: String
     var comic: Comic
-    
-    private let coordinatorDelegate: ComicDetailViewModelCoordinatorDelegate?
     
     required init(comic: Comic, coordinatorDelegate: ComicDetailViewModelCoordinatorDelegate?) {
         self.comic = comic

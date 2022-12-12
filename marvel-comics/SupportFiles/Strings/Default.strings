@@ -3,18 +3,18 @@
 "InitCoderNotImplemented" = "init(coder:) has not been implemented.";
 
 "TransportErrorTitle" = "Ops";
-"TransportErrorMessage" = "Ocorreu um erro de conexão, por favor verifique a sua conexão ou tente novamente mais tarde.";
+"TransportErrorMessage" = "There was a connection error, please check your connection or try again later.";
 
 "SystemErrorTitle" = "Ops";
-"SystemErrorMessage" = "Ocorreu um erro no sistema, por favor tente novamente mais tarde.";
+"SystemErrorMessage" = "A system error has occurred, please try again later.";
 
 // MARK: - ListComics
 
-"ListComicsTitle" = "Quadrinhos";
+"ListComicsTitle" = "Comics";
 
 // MARK: - ComicDetail
 
-"ComicDetailTitle" = "Detalhes";
+"ComicDetailTitle" = "Details";
 
 "AddedToCartTitle" = "Added to cart";
 "AddedToCartMessage" = "Comic added to cart successfully.";
@@ -24,4 +24,8 @@
 
 // MARK: - ChartList
 
-"ChartListTitle" = "Carrinho";
+"ChartListTitle" = "Cart";
+
+// MARK: - Library
+
+"ListLibraryTitle" = "Library";
