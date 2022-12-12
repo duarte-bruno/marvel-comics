@@ -22,12 +22,6 @@ class ListLibraryViewController: UIViewController {
         self.viewModel.delegate = self
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        viewModel.updateComicsList()
-    }
-    
     required init?(coder: NSCoder) {
         fatalError(Str.InitCoderNotImplemented.l())
     }
@@ -42,6 +36,12 @@ class ListLibraryViewController: UIViewController {
         super.viewDidLoad()
         
         setupComicsView()
+        viewModel.updateComicsList()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
         viewModel.updateComicsList()
     }
     
