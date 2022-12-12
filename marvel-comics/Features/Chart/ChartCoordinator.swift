@@ -38,9 +38,8 @@ class ChartCoordinator: Coordinator {
     private func getScreen(_ screen: Screen) -> UIViewController {
         switch screen {
         case .chartList:
-            let service = ListComicsService(UrlSessionRequest(ProdAppConfig.shared))
-            let viewModel = ListComicsViewModel(service: service, coordinatorDelegate: nil)
-            let controller = ListComicsViewController(viewModel: viewModel)
+            let viewModel = ChartListViewModel()
+            let controller = ChartListViewController(viewModel: viewModel)
             return controller
         }
     }

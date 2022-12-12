@@ -55,6 +55,12 @@
 		75BE2A0A2947458B007F0EDB /* ChartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A082947458B007F0EDB /* ChartItem.swift */; };
 		75BE2A0D29474630007F0EDB /* ChartListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A0C29474630007F0EDB /* ChartListViewModel.swift */; };
 		75BE2A0E29474630007F0EDB /* ChartListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A0C29474630007F0EDB /* ChartListViewModel.swift */; };
+		75BE2A1229474F92007F0EDB /* ChartListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A1129474F92007F0EDB /* ChartListViewController.swift */; };
+		75BE2A1329474F92007F0EDB /* ChartListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A1129474F92007F0EDB /* ChartListViewController.swift */; };
+		75BE2A1529475026007F0EDB /* ChartListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A1429475026007F0EDB /* ChartListView.swift */; };
+		75BE2A1629475026007F0EDB /* ChartListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A1429475026007F0EDB /* ChartListView.swift */; };
+		75BE2A182947509B007F0EDB /* ChartItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A172947509B007F0EDB /* ChartItemTableViewCell.swift */; };
+		75BE2A192947509B007F0EDB /* ChartItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE2A172947509B007F0EDB /* ChartItemTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +103,9 @@
 		75BE2A0329473CCE007F0EDB /* ChartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCoordinator.swift; sourceTree = "<group>"; };
 		75BE2A082947458B007F0EDB /* ChartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartItem.swift; sourceTree = "<group>"; };
 		75BE2A0C29474630007F0EDB /* ChartListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartListViewModel.swift; sourceTree = "<group>"; };
+		75BE2A1129474F92007F0EDB /* ChartListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartListViewController.swift; sourceTree = "<group>"; };
+		75BE2A1429475026007F0EDB /* ChartListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartListView.swift; sourceTree = "<group>"; };
+		75BE2A172947509B007F0EDB /* ChartItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartItemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,8 +347,10 @@
 		75BE2A06294741AF007F0EDB /* ChartList */ = {
 			isa = PBXGroup;
 			children = (
-				75BE2A0B29474609007F0EDB /* ViewModels */,
+				75BE2A1029474EF5007F0EDB /* Views */,
 				75BE2A072947457B007F0EDB /* Models */,
+				75BE2A0B29474609007F0EDB /* ViewModels */,
+				75BE2A0F29474EE8007F0EDB /* Controllers */,
 			);
 			path = ChartList;
 			sourceTree = "<group>";
@@ -358,6 +369,23 @@
 				75BE2A0C29474630007F0EDB /* ChartListViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		75BE2A0F29474EE8007F0EDB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				75BE2A1129474F92007F0EDB /* ChartListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		75BE2A1029474EF5007F0EDB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				75BE2A1429475026007F0EDB /* ChartListView.swift */,
+				75BE2A172947509B007F0EDB /* ChartItemTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,16 +495,19 @@
 				75AEEFFC29457C7F005B7ABD /* ListComicsCoordinator.swift in Sources */,
 				75AEF02229467D6E005B7ABD /* Str.swift in Sources */,
 				75AEEFE629441DB9005B7ABD /* AppConfiguration.swift in Sources */,
+				75BE2A182947509B007F0EDB /* ChartItemTableViewCell.swift in Sources */,
 				75AEEFDD2942D683005B7ABD /* TabBarViewController.swift in Sources */,
 				75BE2A0429473CCE007F0EDB /* ChartCoordinator.swift in Sources */,
 				75AEEFEB294500CB005B7ABD /* ComicsResult.swift in Sources */,
 				75BE2A0D29474630007F0EDB /* ChartListViewModel.swift in Sources */,
+				75BE2A1529475026007F0EDB /* ChartListView.swift in Sources */,
 				75AEEFE92944FEA8005B7ABD /* ListComicsService.swift in Sources */,
 				75AEF02529468A42005B7ABD /* ComicsListView.swift in Sources */,
 				75BE29FD2946E6A6007F0EDB /* ComicDetailViewController.swift in Sources */,
 				75AEEFE12943FC32005B7ABD /* HttpRequest.swift in Sources */,
 				75BE2A002946E6C2007F0EDB /* ComicDetailViewModel.swift in Sources */,
 				75BE2A092947458B007F0EDB /* ChartItem.swift in Sources */,
+				75BE2A1229474F92007F0EDB /* ChartListViewController.swift in Sources */,
 				75AEF028294697A7005B7ABD /* ComicsCollectionViewCell.swift in Sources */,
 				75BE29F72946AAA0007F0EDB /* CustomImageView.swift in Sources */,
 				75AEEFDF2942DC8E005B7ABD /* ListComicsViewController.swift in Sources */,
@@ -495,16 +526,19 @@
 				75AEF00529465989005B7ABD /* ListComicsViewModel.swift in Sources */,
 				75AEF02329467D6E005B7ABD /* Str.swift in Sources */,
 				75AEF004294655D9005B7ABD /* ListComicsViewModelTests.swift in Sources */,
+				75BE2A192947509B007F0EDB /* ChartItemTableViewCell.swift in Sources */,
 				75AEF00929465A1C005B7ABD /* ListComicsService.swift in Sources */,
 				75BE2A0529473CCE007F0EDB /* ChartCoordinator.swift in Sources */,
 				75AEF00829465A14005B7ABD /* ComicsResult.swift in Sources */,
 				75BE2A0E29474630007F0EDB /* ChartListViewModel.swift in Sources */,
+				75BE2A1629475026007F0EDB /* ChartListView.swift in Sources */,
 				75AEF00E29465A2F005B7ABD /* TabBarViewController.swift in Sources */,
 				75AEF02629468A42005B7ABD /* ComicsListView.swift in Sources */,
 				75BE29FE2946E6A6007F0EDB /* ComicDetailViewController.swift in Sources */,
 				75AEF00A29465A1F005B7ABD /* ListComicsCoordinator.swift in Sources */,
 				75BE2A012946E6C2007F0EDB /* ComicDetailViewModel.swift in Sources */,
 				75BE2A0A2947458B007F0EDB /* ChartItem.swift in Sources */,
+				75BE2A1329474F92007F0EDB /* ChartListViewController.swift in Sources */,
 				75AEF029294697A7005B7ABD /* ComicsCollectionViewCell.swift in Sources */,
 				75BE29F82946AAA0007F0EDB /* CustomImageView.swift in Sources */,
 				75AEF00729465A12005B7ABD /* Comic.swift in Sources */,
