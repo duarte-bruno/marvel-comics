@@ -29,8 +29,9 @@ class ComicsCollectionViewCell: UICollectionViewCell {
         guard let comic = comic else { return }
         
         label.text = comic.title
+        label.font = UIFont.systemFont(ofSize: 15, weight: .medium)
         label.textAlignment = .left
-        label.numberOfLines = 0
+        label.numberOfLines = 2
         label.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(label)
         
@@ -44,8 +45,10 @@ class ComicsCollectionViewCell: UICollectionViewCell {
     private func setupImage() {
         guard let comic = comic else { return }
         
-        image.loadImageUsing(comic.thumbnail.thumbUrl(size: .portrait_uncanny))
+        image.loadImageUsing(comic.thumbnail.thumbUrl(size: .standard_fantastic))
         image.contentMode = .scaleAspectFill
+        image.layer.cornerRadius = 4
+        image.clipsToBounds = true
         image.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(image)
         
@@ -53,7 +56,8 @@ class ComicsCollectionViewCell: UICollectionViewCell {
             image.leftAnchor.constraint(equalTo: contentView.leftAnchor),
             image.rightAnchor.constraint(equalTo: contentView.rightAnchor),
             image.topAnchor.constraint(equalTo: contentView.topAnchor),
-            image.bottomAnchor.constraint(equalTo: label.topAnchor, constant: -8)
+            image.heightAnchor.constraint(equalTo: contentView.widthAnchor),
+            image.bottomAnchor.constraint(equalTo: label.topAnchor, constant: -6)
         ])
     }
 }

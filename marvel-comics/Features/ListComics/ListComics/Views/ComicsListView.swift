@@ -69,17 +69,15 @@ class ComicsListView: UIView {
     }
     
     private func createCollectionLayout() -> UICollectionViewLayout {
-        let itemWidth = UIScreen.main.bounds.width/2 - 24
-        let heightProportion = CGFloat(1.83)
-        let itemHeight = itemWidth * heightProportion
+        let itemWidth = ((UIScreen.main.bounds.width - 10) / 3) - 12
 
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 20, left: 16, bottom: 20, right: 16)
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 5, bottom: 10, right: 5)
 
-        layout.itemSize = CGSize(width: itemWidth, height: itemHeight)
-
-        layout.minimumInteritemSpacing = 8
-        layout.minimumLineSpacing = 30
+        layout.minimumInteritemSpacing = 6
+        layout.minimumLineSpacing = 15
+        
+        layout.itemSize = CGSize(width: itemWidth, height: itemWidth + 42)
         
         return layout
     }
@@ -119,5 +117,3 @@ extension ComicsListView: UICollectionViewDataSource {
         return cell
     }
 }
-
-

@@ -46,8 +46,8 @@ class ListComicsViewController: UIViewController {
         view.addSubview(comicsListView)
         
         NSLayoutConstraint.activate([
-            comicsListView.leftAnchor.constraint(equalTo: view.layoutMarginsGuide.leftAnchor),
-            comicsListView.rightAnchor.constraint(equalTo: view.layoutMarginsGuide.rightAnchor),
+            comicsListView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            comicsListView.rightAnchor.constraint(equalTo: view.rightAnchor),
             comicsListView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
             comicsListView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor),
         ])

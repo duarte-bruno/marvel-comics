@@ -47,6 +47,7 @@ struct Thumbnail: Codable {
     
     enum ThumbSize: String {
         case portrait_uncanny
+        case standard_fantastic
     }
     
     func thumbUrl(size: ThumbSize) -> String {
