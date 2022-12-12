@@ -73,6 +73,20 @@ struct Thumbnail: Codable {
 
 // MARK: - Price
 struct Price: Codable {
-    let type: String
+    let type: PriceType
     let price: Double
+    
+    enum PriceType: String, Codable {
+        case printPrice
+        case digitalPrice
+        
+        func label() -> String {
+            switch self {
+            case .printPrice:
+                return "Printed"
+            case .digitalPrice:
+                return "Digital"
+            }
+        }
+    }
 }

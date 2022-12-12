@@ -65,11 +65,11 @@ extension ListComicsCoordinator: ListComicsViewModelCoordinatorDelegate {
 }
 
 extension ListComicsCoordinator: ComicDetailViewModelCoordinatorDelegate {
-    func buyComic(_ comic: Comic) {
+    func buyComic(_ comic: Comic, _ price: Price) {
         
     }
     
-    func addComicToChart(_ comic: Comic) {
+    func addComicToChart(_ comic: Comic, _ price: Price) {
         
     }
 }

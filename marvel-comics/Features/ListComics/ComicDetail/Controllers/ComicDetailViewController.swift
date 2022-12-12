@@ -103,7 +103,7 @@ class ComicDetailViewController: UIViewController {
         
         let issue = UILabel()
         
-        issue.text = "Issue \(viewModel.comic.issueNumber)#"
+        issue.text = "Issue: \(viewModel.comic.issueNumber)#"
         issue.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         issue.textAlignment = .left
         issue.numberOfLines = 0
@@ -112,7 +112,7 @@ class ComicDetailViewController: UIViewController {
         
         let pages = UILabel()
         
-        pages.text = "\(viewModel.comic.pageCount) pages"
+        pages.text = "Pages: \(viewModel.comic.pageCount)"
         pages.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         pages.textAlignment = .left
         pages.numberOfLines = 0
@@ -147,7 +147,82 @@ class ComicDetailViewController: UIViewController {
     }
     
     private func setupButtons() {
+        let prices = UILabel()
         
+        prices.text = "Price"
+        prices.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        prices.textAlignment = .left
+        prices.numberOfLines = 0
+        prices.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addArrangedSubview(prices)
+        
+        let buyNow = UILabel()
+        
+        buyNow.text = "Buy with 1 click"
+        buyNow.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        buyNow.textAlignment = .left
+        buyNow.numberOfLines = 0
+        buyNow.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addArrangedSubview(buyNow)
+        
+        let buyNowStack = UIStackView()
+        buyNowStack.translatesAutoresizingMaskIntoConstraints = false
+        buyNowStack.axis = .horizontal
+        buyNowStack.distribution = .fillEqually
+        buyNowStack.spacing = 5
+        contentView.addArrangedSubview(buyNowStack)
+        
+        for (index, price) in viewModel.comic.prices.enumerated() {
+            let button = UIButton()
+            button.translatesAutoresizingMaskIntoConstraints = false
+            
+            button.setTitle("U$\(price.price ) \(price.type.label())", for: .normal)
+            button.backgroundColor = .red
+            button.tintColor = .white
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+            button.layer.cornerRadius = 4
+            button.tag = index
+            button.addTarget(self, action: #selector(buyNowTap), for: .touchUpInside)
+            buyNowStack.addArrangedSubview(button)
+        }
+        
+        let addChart = UILabel()
+        
+        addChart.text = "Add to chart"
+        addChart.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        addChart.textAlignment = .left
+        addChart.numberOfLines = 0
+        addChart.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addArrangedSubview(addChart)
+        
+        let addChartStack = UIStackView()
+        addChartStack.translatesAutoresizingMaskIntoConstraints = false
+        addChartStack.axis = .horizontal
+        addChartStack.distribution = .fillEqually
+        addChartStack.spacing = 5
+        contentView.addArrangedSubview(addChartStack)
+        
+        for (index, price) in viewModel.comic.prices.enumerated() {
+            let button = UIButton()
+            button.translatesAutoresizingMaskIntoConstraints = false
+            
+            button.setTitle("U$\(price.price ) \(price.type.label())", for: .normal)
+            button.backgroundColor = .black
+            button.tintColor = .white
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+            button.layer.cornerRadius = 4
+            button.tag = index
+            button.addTarget(self, action: #selector(addToChartTap), for: .touchUpInside)
+            addChartStack.addArrangedSubview(button)
+        }
+    }
+    
+    @objc func buyNowTap(sender: UIButton?) {
+        viewModel.buyComic(viewModel.comic.prices[sender?.tag ?? 0])
+    }
+    
+    @objc func addToChartTap(sender: UIButton?) {
+        viewModel.addComicToChart(viewModel.comic.prices[sender?.tag ?? 0])
     }
 }
 

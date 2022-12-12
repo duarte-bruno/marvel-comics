@@ -8,8 +8,8 @@
 import Foundation
 
 protocol ComicDetailViewModelCoordinatorDelegate: AnyObject {
-    func buyComic(_ comic: Comic)
-    func addComicToChart(_ comic: Comic)
+    func buyComic(_ comic: Comic, _ price: Price)
+    func addComicToChart(_ comic: Comic, _ price: Price)
 }
 
 protocol ComicDetailViewModelDelegate: AnyObject {
@@ -23,8 +23,8 @@ protocol ComicDetailViewModelProtocol {
     
     init(comic: Comic, coordinatorDelegate: ComicDetailViewModelCoordinatorDelegate?)
     
-    func buyComic()
-    func addComicToChart()
+    func buyComic(_ price: Price)
+    func addComicToChart(_ price: Price)
 }
 
 class ComicDetailViewModel: ComicDetailViewModelProtocol {
@@ -41,11 +41,11 @@ class ComicDetailViewModel: ComicDetailViewModelProtocol {
         self.title = Str.ComicDetailTitle.l()
     }
     
-    func buyComic() {
-        coordinatorDelegate?.buyComic(comic)
+    func buyComic(_ price: Price) {
+        coordinatorDelegate?.buyComic(comic, price)
     }
     
-    func addComicToChart() {
-        coordinatorDelegate?.addComicToChart(comic)
+    func addComicToChart(_ price: Price) {
+        coordinatorDelegate?.addComicToChart(comic, price)
     }
 }
