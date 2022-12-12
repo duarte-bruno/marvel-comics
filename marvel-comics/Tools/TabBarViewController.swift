@@ -19,20 +19,18 @@ class TabBarViewController: UITabBarController {
     // MARK: - Setup
 
     private func setup() {
+        let listComicsCoordinator = ListComicsCoordinator()
         let listComicsItem = UITabBarItem(
-            title: "Comics",
+            title: listComicsCoordinator.title,
             image: UIImage(systemName: "books.vertical"),
             selectedImage: UIImage(systemName: "books.vertical"))
-        
-        let listComicsCoordinator = ListComicsCoordinator()
         listComicsCoordinator.navigationController.tabBarItem = listComicsItem
         
+        let listComicsCoordinator2 = ListComicsCoordinator()
         let listComicsItem2 = UITabBarItem(
-            title: "Comics 2",
+            title: listComicsCoordinator2.title,
             image: UIImage(systemName: "books.vertical"),
             selectedImage: UIImage(systemName: "books.vertical"))
-        
-        let listComicsCoordinator2 = ListComicsCoordinator()
         listComicsCoordinator2.navigationController.tabBarItem = listComicsItem2
 
         self.viewControllers = [listComicsCoordinator.navigationController, listComicsCoordinator2.navigationController]
