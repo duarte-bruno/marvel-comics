@@ -43,9 +43,11 @@ class ComicDetailViewModel: ComicDetailViewModelProtocol {
     
     func buyComic(_ price: Price) {
         coordinatorDelegate?.buyComic(comic, price)
+        delegate?.showErrorAlert(title: Str.BoughtTitle.l(), message: Str.BoughtMessage.l())
     }
     
     func addComicToChart(_ price: Price) {
         coordinatorDelegate?.addComicToChart(comic, price)
+        delegate?.showErrorAlert(title: Str.AddedToCartTitle.l(), message: Str.AddedToCartMessage.l())
     }
 }
