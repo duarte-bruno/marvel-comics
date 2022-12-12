@@ -21,6 +21,7 @@ protocol ChartListViewModelProtocol {
     
     func closeChart()
     func removeItem(_ chartItem: ChartItem)
+    func buyComic(_ comic: Comic, _ price: Price)
     func addComicToChart(_ comic: Comic, _ price: Price)
 }
 
@@ -65,7 +66,31 @@ class ChartListViewModel: ChartListViewModelProtocol {
         delegate?.chartListUpdated()
     }
     
+    func buyComic(_ comic: Comic, _ price: Price) {
+        service.getCartPurchases { [weak self] result in
+            switch result {
+            case .success(let comics):
+                var newList = [comic]
+                newList.append(contentsOf: comics ?? [])
+                self?.updateOnePurchase(with: newList)
+            case .failure:
+                self?.delegate?.showErrorAlert(title: Str.SystemErrorTitle.l(), message: Str.SystemErrorMessage.l())
+            }
+        }
+    }
+    
     // MARK: - Private methods
+    
+    private func updateOnePurchase(with data: [Comic]) {
+        service.postCartPurchases(data: data) { [weak self] result in
+            switch result {
+            case .success:
+                return
+            case .failure:
+                self?.delegate?.showErrorAlert(title: Str.SystemErrorTitle.l(), message: Str.SystemErrorMessage.l())
+            }
+        }
+    }
     
     private func updatePurchases(with data: [Comic]?) {
         var newList: [Comic] = []

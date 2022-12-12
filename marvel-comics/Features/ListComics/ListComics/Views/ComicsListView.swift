@@ -8,7 +8,6 @@
 import UIKit
 
 protocol ComicsListViewDelegate: AnyObject {
-    func refreshComicsListContent()
     func comicSelected(comic: Comic)
 }
 
@@ -28,7 +27,6 @@ class ComicsListView: UIView {
         
         setupView()
         setupCollectionView()
-        setupRefreshControl()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -40,7 +38,6 @@ class ComicsListView: UIView {
     func updateComicsList(comics: [Comic]) {
         DispatchQueue.main.async { [weak self] in
             self?.comics = comics
-            self?.collectionView.refreshControl?.endRefreshing()
             self?.collectionView.reloadData()
         }
     }
@@ -81,17 +78,6 @@ class ComicsListView: UIView {
         layout.itemSize = CGSize(width: itemWidth, height: itemWidth + 42)
         
         return layout
-    }
-    
-    private func setupRefreshControl() {
-        let refreshControl = UIRefreshControl()
-        refreshControl.tintColor = .red
-        refreshControl.addTarget(self, action: #selector(refreshContent), for: .valueChanged)
-        collectionView.refreshControl = refreshControl
-    }
-    
-    @objc func refreshContent() {
-        delegate?.refreshComicsListContent()
     }
 }
 

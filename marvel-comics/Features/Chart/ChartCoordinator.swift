@@ -35,7 +35,8 @@ class ChartCoordinator: Coordinator {
     // MARK: - Public methods
     
     func buyComic(_ comic: Comic, _ price: Price) {
-        
+        guard let chartController = navigationController.viewControllers[0] as? ChartListViewController else { return }
+        chartController.viewModel.buyComic(comic, price)
     }
     
     func addComicToChart(_ comic: Comic, _ price: Price) {
